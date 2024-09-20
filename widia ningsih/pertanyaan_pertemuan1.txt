@@ -1,0 +1,22 @@
+Pertanyaan dan Jawaban Pertemuan Pertama
+1. apa yg dimaksud dengan veriabel?
+   = variabel adalah tempat menyimpan data atau nilai.
+2. sebutkan syarat dan ketentuan variabel!
+   = huruf kapital dan huruf kecil memiliki arti yang berbeda.
+3. apa itu case sensitive pada python?
+   = cara komputer memperlakukan kepekaan terhadap huruf, yaitu apakah dalam bentuk huruf besar atau huruf kecil.
+     contohnya alert() benar
+               ALERT() salah
+4. sebutkan macam-macam oenulisan variabel!
+   = pascal case (WidiaNingsih)      
+     camel case (widiaNingsih)         
+     snake case (widia_ningsih)
+5. ada berapa tipe data dalam python
+   str : x="Hello Widia"
+   int : x=10
+   float : x=10.5
+   complex : x=1j
+   list : x=["apel", "pisang", "mangga"]      
+   tuple : x=("apel", "pisang", "mangga")      
+   set : x={"apel", "pisang", "mangga"} 
+   range : x=range (6)      
