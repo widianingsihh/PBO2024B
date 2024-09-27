@@ -1,3 +1,6 @@
-Q1 = saya mempelajari tentang lovemeter
-Q2 = alhamdulillah sampai sini paham!
-Q3 = sekitar 20 menit
+NAMA : ISVI HANI RAMADHAN
+NIM : 2355201028
+
+Pengalaman saya ketika belajar di praktikum 2 sangat menyenangkan karena saya mempelajari ilmu baru yaitu koordinat di visual studio code, 
+sempat kesulitan namun dengan bantuan teman saya saya pun berhasil mengerjakannya dan membantu teman saya yang masih kesulitan dalam pengerjaan, 
+sayan pun merasa bangga pada diri sendiri, walaupun tidak banyak namun saya bias memnebarkan manfaat kepada org disekitar saya
