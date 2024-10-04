@@ -1,35 +1,42 @@
-#               CF2                 #
+class Konoha:
+    def __init__(self, encoded_str):
+        self.encoded_str = encoded_str
+        self.sum_digits = 0
+        self.letters = []
 
-print ("The Eligma Code")
+    def calculate_sum_of_digits(self):
+        """Menghitung jumlah dari angka dalam string."""
+        for char in self.encoded_str:
+            if char.isdigit():
+                self.sum_digits += int(char)
 
-# input1 = input("Masukkan Input :")
-def geser_karakter(karakter, jumlah_geser):
-    # Menggeser karakter berdasarkan jumlah geseran dengan memutar kembali ke 'a' jika melebihi 'z'
-    if 'a' <= karakter <= 'z':
-        return chr((ord(karakter) - ord('a') + jumlah_geser) % 26 + ord('a'))
-    elif 'A' <= karakter <= 'Z':
-        return chr((ord(karakter) - ord('A') + jumlah_geser) % 26 + ord('A'))
-    else:
-        return karakter
+    def collect_letters(self):
+        """Mengumpulkan huruf dari string."""
+        for char in self.encoded_str:
+            if char.isalpha():
+                self.letters.append(char)
 
-def proses_string(input_string):
-    angka_total = 0
-    huruf_saja = []
+    def decrypt(self):
+        """Melakukan dekripsi pada string dan mengembalikan hasilnya."""
+        self.calculate_sum_of_digits()
+        self.collect_letters()
 
-    # Memisahkan huruf dan angka, serta menjumlahkan angka
-    for karakter in input_string:
-        if karakter.isdigit():
-            angka_total += int(karakter)
-        elif karakter.isalpha():
-            huruf_saja.append(karakter)
-    
-    # Geser huruf sesuai jumlah penjumlahan angka
-    hasil_geser = [geser_karakter(huruf, angka_total) for huruf in huruf_saja]
-    
-    # Gabungkan hasil
-    return ''.join(hasil_geser)
+        shift = self.sum_digits % 26  # Menghindari pergeseran lebih dari 26
+        decrypted_letters = []
+
+        for letter in self.letters:
+            if letter.islower():
+                # Geser huruf kecil
+                new_char = chr((ord(letter) - ord('a') + shift) % 26 + ord('a'))
+            else:
+                # Geser huruf besar
+                new_char = chr((ord(letter) - ord('A') + shift) % 26 + ord('A'))
+            decrypted_letters.append(new_char)
+
+        return ''.join(decrypted_letters)
 
 # Contoh penggunaan
-input_string = "CF2 W4HY8M89A"
-output_string = proses_string(input_string)
-print(output_string)
+input_str = "CF2 W4HY8M1N4"
+decoder = Konoha(input_str)
+output = decoder.decrypt()
+print(output) 
