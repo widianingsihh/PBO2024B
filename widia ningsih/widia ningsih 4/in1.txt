@@ -1,0 +1,5 @@
+pagi ini sangat cerah
+membuatku susah pergi ke kampus######## 
+Min: 31 karakter
+Max: 33 karakter
+Range: 2 karakter
