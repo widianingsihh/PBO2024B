@@ -1,3 +1,4 @@
+#                                           CF2                                 #
 class Konoha:
     def __init__(self, encoded_str):
         self.encoded_str = encoded_str
@@ -5,7 +6,7 @@ class Konoha:
         self.letters = []
 
     def calculate_sum_of_digits(self):
-        """Menghitung jumlah dari angka dalam string."""
+        # Menghitung jumlah dari angka dalam string.
         for char in self.encoded_str:
             if char.isdigit():
                 self.sum_digits += int(char)
@@ -17,7 +18,10 @@ class Konoha:
                 self.letters.append(char)
 
     def decrypt(self):
-        """Melakukan dekripsi pada string dan mengembalikan hasilnya."""
+        #Melakukan dekripsi pada string dan mengembalikan hasilnya.
+        if not self.encoded_str:
+            return "Input Nya Kosong"  # Jika Input Kosong maka outputnya keluar
+        
         self.calculate_sum_of_digits()
         self.collect_letters()
 
@@ -36,7 +40,7 @@ class Konoha:
         return ''.join(decrypted_letters)
 
 # Contoh penggunaan
-input_str = "CF2 W4HY8M1N4"
+input_str = "CF2 W4MMY4N1A"  #Input
 decoder = Konoha(input_str)
 output = decoder.decrypt()
-print(output) 
+print(output)
